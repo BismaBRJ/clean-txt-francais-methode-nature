@@ -20,7 +20,7 @@ Although a hobby project, I would like to see it succeed, though it may take a l
 
 This book is especially different in that just about every word in the original text is accompanied by an IPA transcription below it. The text (`.txt`) file provided on the Internet Archive is unfortunately messy in that regard, as if a scanned version of the book was merely ran through considerably imperfect language-agnostic OCR with no cleanup. A lot of IPA transcriptions were not mapped to the correct Unicode characters, even some French words were not perfectly recognized (so incorrect spelling by the OCR), and the spacing/whitespace is highly inconsistent.
 
-Thus, the goal of this project is to clean up and process the `.txt` file so that
+Thus, the goals of this project are to clean up and process the `.txt` file so that
 
 1. every IPA transcription is correct,
 
@@ -28,8 +28,10 @@ Thus, the goal of this project is to clean up and process the `.txt` file so tha
 
 3. hopefully the use of whitespace becomes systematic, and
 
-4. for flexibility, the book becomes available in text formats both with and without the IPA transcriptions (this may require the use of appropriate data structures and/or data formats in its storage), maybe even, say, EPUB where the IPA transcription can be accessed upon clicking any word.
+4. for flexibility, the book becomes available in text formats both with and without the IPA transcriptions (and for those with transcriptions, it could be per word, per line, or per sentence), and maybe even, say, EPUB where the IPA transcription can be accessed upon clicking any word (or line, or sentence).
 
-I will consider this project to be complete when one can easily import the text into a language learning tool like [Lute](https://github.com/LuteOrg/lute-v3) which indeed works with text files (.txt), so I may even split the final text into dozens of files, that is, one per chapter. Or at least, that was my original motivation for starting this project.
+These goals may require the use of appropriate data structures and/or data formats in the storage of the book.
 
-Of course, the cleaned-up text after such completion of the project may be further analyzedand processed. For example, I imagine one could compute a word frequency list to be stored as formats like `.tsv`, while making use of, say, `collections.Countable` and/or [marisa-trie](https://github.com/pytries/marisa-trie).
+I will consider this project to be complete when one can easily import the text into a language learning tool like [Lute](https://github.com/LuteOrg/lute-v3) which indeed works with text files (.txt), so I may even split the final text into dozens of files, that is, one per chapter, possibly the front matter as its own file or as part of the first chapter. Or at least, that was my original motivation for starting this project.
+
+Of course, the cleaned-up text after such completion of the project may be further analyzed and processed. For example, I imagine one could compute a word frequency list to be stored as formats like `.tsv`, while making use of, say, `collections.Countable` and/or [marisa-trie](https://github.com/pytries/marisa-trie). There would be more storage considerations here, such as whether or not the front matter is to be included in such computations.
